@@ -50,6 +50,7 @@ main {
 
 .player--active {
   background-color: rgba(255, 255, 255, 0.6);
+  transition: 0.7s;
 }
 
 .player--active .name {
@@ -57,6 +58,18 @@ main {
 }
 
 .player--active .score {
+  font-weight: 700;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+.player--winner {
+  border: 5px solid #972ce9;
+}
+
+.player--winner .name {
+  color: #972ce9;
   font-weight: 700;
 }
 
@@ -76,7 +89,40 @@ main {
 .current-score {
   font-size: 3.5rem;
 }
+/* MODAL STYLES */
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.modal {
+  width: 50rem;
+  position: absolute;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.15);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
 /* ABSOLUTELY POSITIONED ELEMENTS */
 
 .btn {
@@ -95,8 +141,12 @@ main {
   border-radius: 0.5rem;
 }
 
+.btn--rules {
+  top: 2rem;
+  font-weight: 700;
+}
 .btn--new {
-  top: 4rem;
+  top: 32.5rem;
 }
 .btn--roll {
   top: 39.3rem;
@@ -116,4 +166,8 @@ main {
   transform: translate(-50%);
   width: 10rem;
   height: auto;
+}
+
+.hidden {
+  display: none;
 }
