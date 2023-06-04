@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a17dbd;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  display: flex;
+  background-color: rgba(2555, 255, 255, 0.5);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* ELEMENTS */
+.name {
+  font-size: 4rem;
+  position: relative;
+  margin-bottom: 8rem;
+  font-weight: 300;
+}
+
+.score {
+  font-size: 8rem;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 700;
+}
+
+.current {
+  background-color: #a17dbd;
+  opacity: 0.7;
+  width: 65%;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.current-label {
+  font-size: 1.7rem;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* ABSOLUTELY POSITIONED ELEMENTS */
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  width: 10rem;
+  font-family: "Karla", sans-serif;
+  background: none;
+  border: none;
+
+  background-color: rgba(70, 62, 75, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.btn--new {
+  top: 4rem;
+}
+.btn--roll {
+  top: 39.3rem;
+}
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:active {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translate(-50%);
+  width: 10rem;
+  height: auto;
+}
